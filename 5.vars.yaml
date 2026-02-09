@@ -1,0 +1,15 @@
+- name : task level variales
+  hosts: local
+  connection: local
+  become: yes
+  vars:                                           #play level variables
+    doing: "writing ansible playbook"
+    level: "Intermediate"
+    experience : "4years"
+
+  tasks:
+  - name: Printing the varables
+    vars: course                                  # task level variables
+    ansible.builtin.debug:
+      msg: "Doing is : {{vars}}; experience is : {{exerience}}"
+
