@@ -1,0 +1,11 @@
+- name : "nagaajay"                   # one student info
+  dob  : 1999-01-01
+  mobile : 3143675338
+  address:
+  - flatnumber: 234                   #this is one object
+    street: lakeview
+    City & zipcode: Tampa, 33613
+
+  - flatnumber: 234                   #this is one object
+    street: lakeview
+    City & zipcode: Tampa, 33613
