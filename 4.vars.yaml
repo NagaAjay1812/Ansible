@@ -1,0 +1,13 @@
+- name: play level variables
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    doing: writing ansible palybook
+    level: Intermediate level
+    experience: "4years"
+
+  tasks:
+  - name: print variables
+    ansibile.builtin.debug:
+      msg: "Doing is : {{vars}}; experience is : {{exerience}}"
