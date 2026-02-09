@@ -2,7 +2,13 @@
   hosts: web
   become: yes   # run with sudo access otherwise we can't intall nginx
   tasks:
-    - name: Install the Nginx package
-      ansible.builtin.package:
-        name: nginx
-        state: present
+  - name: Install the Nginx package
+    ansible.builtin.package:
+      name: nginx
+      state: present      #to install Nginx
+
+  - name : Enable and start the Nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
