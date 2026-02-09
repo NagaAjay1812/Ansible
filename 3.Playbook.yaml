@@ -1,0 +1,8 @@
+- name: Install the Nginx Package
+  hosts: web
+  become: yes   # run with sudo access otherwise we can't intall nginx
+  tasks:
+    - name: Install the Nginx package
+      ansible.builtin.package:
+        name: nginx
+        state: present
