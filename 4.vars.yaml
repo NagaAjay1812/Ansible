@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   become: yes
-  vars:
+  vars:                                       #these are all play level variables
     doing: writing ansible palybook
     level: Intermediate level
     experience: "4years"
