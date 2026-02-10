@@ -12,5 +12,5 @@
     vars:                                         # task level variables
       doing: learning how to write playbooks                             
     ansible.builtin.debug:
-      msg: "Doing is : {{vars}}; experience is : {{experience}}"
+      msg: "Doing is : {{doing}}; experience is : {{experience}}"        # here doing is  printing that is task level variable but experience is not there in task level var so it will take from global level variable(i.e., from play level variable)
 
