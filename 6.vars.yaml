@@ -1,0 +1,8 @@
+- name : kept play level variables  in seperate yaml
+  host: local
+  connection: local
+  become: yes
+  tasks:
+  - name: printing varaibles 
+    ansible.builtin.debug:
+      msg: "doing is : {{doing}} , experience is : {{experience}}"
