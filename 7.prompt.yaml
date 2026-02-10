@@ -1,0 +1,15 @@
+- name: printing username and password
+  hosts: local
+  connection: local
+  become: yes
+  vars_prompt:
+  - name: "ansible_user"
+    prompt: "Enter your username"
+    private: false # Set to true (default) to hide input, false to show (like a username)
+  - name: "ansible_password"
+    prompt: "Enter your password"
+    private: true # Set to true (default) to hide input, false to show 
+  tasks:
+  - name: printing username and passowrd
+    ansible.builtin.debug:
+      msg: "logging in as {{ansible_user}}"
