@@ -9,7 +9,8 @@
 
   tasks:
   - name: Printing the varables
-    vars: "course"                                  # task level variables
+    vars:                                         # task level variables
+      doing: learning how to write playbooks                             
     ansible.builtin.debug:
       msg: "Doing is : {{vars}}; experience is : {{exerience}}"
 
