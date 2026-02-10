@@ -12,5 +12,5 @@
     vars:                                         # task level variables
       doing: learning how to write playbooks                             
     ansible.builtin.debug:
-      msg: "Doing is : {{vars}}; experience is : {{exerience}}"
+      msg: "Doing is : {{vars}}; experience is : {{experience}}"
 
