@@ -4,8 +4,15 @@
   hosts: local
   connection: local
 
+  vars:                                         #topic is a string
+    topics: linux, shell, ansible, terraform
+
+  
   tasks:
-  - name: filters
+  - name: Greeting filter
     ansible.builtin.debug:
       msg: "Hi, Naga {{ Greeting | default('good morning')}}"
-  
+
+  - name: convert from string to list     #convert string (topics) to list
+    ansible.builtin.debug:
+      msg: "{{ topics | ansible.builtin.split(',') }}"
