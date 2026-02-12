@@ -1,0 +1,10 @@
+- name: demo on conditions
+  hosts: local
+  connection: local
+  vars:
+    age: 24
+  tasks:
+  - name: check he/she is older than 18 or not
+    ansible.builtin.debug:
+      msg: "Yes, he/she older than 18"
+    when: age > 18
