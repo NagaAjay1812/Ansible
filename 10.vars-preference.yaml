@@ -18,7 +18,7 @@
     vars:
       NAME: "Ansible from task level"
 
-  - name: print the name
+  - name: Ansible from args
     ansible.builtin.debug:
      msg: "Hi, my {{ NAME }}" 
 
