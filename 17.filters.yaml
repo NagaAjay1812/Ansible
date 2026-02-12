@@ -7,7 +7,10 @@
   vars:                                         #topic is a string
     topics: linux, shell, ansible, terraform
 
-  
+  tags:
+    Name: Naga
+    course: DevSecOps with AWS
+
   tasks:
   - name: Greeting filter
     ansible.builtin.debug:
@@ -16,3 +19,16 @@
   - name: convert from string to list     #convert string (topics) to list
     ansible.builtin.debug:
       msg: "{{ topics | ansible.builtin.split(',') }}"
+
+  - name: convert from map to list     #convert map (tags) to list
+    ansible.builtin.set_fact:
+      my_list: "{{ tags | ansible.builtin.dict2items }}"
+
+  - name: Display the new list structure
+    ansible.builtin.debug:
+      var: my_list
+
+  - name: Loop through the new list
+    ansible.builtin.debug:
+        msg: "Key: {{ item.key }}, Value: {{ item.value }}"
+    loop: "{{ my_list }}"
