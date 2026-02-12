@@ -1,0 +1,10 @@
+- name: demo on conditions
+  hosts: local
+  connection: local
+  vars:
+    IS_LIVE: true
+  tasks:
+  - name: check it is live or not
+    ansibile.builtin.debug:
+      msg: "Yes, its Live"
+    when: IS_LIVE
