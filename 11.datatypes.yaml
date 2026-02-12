@@ -3,7 +3,7 @@
   connection: local
 
   vars:
-    COURSSE: "DevSecOps with AWS" # string
+    COURSE: "DevSecOps with AWS" # string
     DURATION: 140 #number
     IS_LIVE: true #bool
     DETAILS:  #map/dictionary
