@@ -1,0 +1,26 @@
+- name: demo on data types
+  hosts: local
+  connection: local
+
+  vars:
+    Course: "DevSecOps with AWS" # string
+    Duration: 140 #number
+    IS_LIVE: true #bool
+    DETAILS:  #map/dictionary
+      Months: 4
+      Trainee: "NAGAAJAY"
+    Topics: #list -/[]
+    - Linux
+    - shell
+    - Ansible
+
+  tasks:
+  - name: printing the variables
+    ansible.builtin.debug:
+      msg: |
+      Course: " {{Course}}"
+      Duration: "{{Duration}}, months are :{{Months}} and trainee : {{Trainee}}"
+      Learned topics: "{{Topics}}"
+
+
+
