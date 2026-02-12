@@ -3,9 +3,9 @@
   connection: local
 
   tasks:
-  # - name: print the facts from server 
-  #   ansible.builtin.debug:
-  #     msg: "{{ ansible_facts }}"    # printing facts from server
+  - name: print the facts from server 
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}"    # printing facts from server
 
   - name: checking its from redhat family or not
     ansible.builtin.debug:
