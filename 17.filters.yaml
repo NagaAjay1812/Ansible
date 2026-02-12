@@ -6,6 +6,6 @@
 
   tasks:
   - name: filters
-  ansible.builtin.debug:
-    msg: "Hi, Naga {{ Greeting | default('good morning')}}"
+    ansible.builtin.debug:
+      msg: "Hi, Naga {{ Greeting | default('good morning')}}"
   
