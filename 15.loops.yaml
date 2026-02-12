@@ -5,8 +5,9 @@
   tasks:
   - name: loop the variables
     ansbile.builtin.debug:
-      msg: "{{ items }}"
+      msg: "{{ item }}"
     loop:
       - Naga
       - Ajay
       - Bhartah
+
