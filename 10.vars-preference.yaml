@@ -1,0 +1,25 @@
+- name: checking the prefrence variables
+  hosts: local
+  connection: local
+
+  vars:
+   NAME: Ansbile from play level
+
+  vars_file:
+  - course.yaml
+
+  vars_prompt:
+  - name: "ansible_prompt_level"
+    NAME: "Ansible from prompt level"
+    private: false 
+ 
+  tasks:
+  - name: prefrence the vars
+    vars:
+      NAME: "Ansible from task level"
+
+  - name: args level
+    ansible.builtin.debug:
+     msg: "Hi, my {{NAME}}" 
+
+  

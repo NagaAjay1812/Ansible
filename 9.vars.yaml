@@ -1,0 +1,8 @@
+- name : arg varaibles
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: passing the arguments from CLI
+    ansible.builtin.debug:
+      msg: "Hi, This is {{ NAME }}, Having 4years of devops experience "
