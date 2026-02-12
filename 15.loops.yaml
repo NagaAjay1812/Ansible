@@ -6,8 +6,8 @@
   - name: loop the variables
     ansible.builtin.debug:
       msg: "{{ item }}"
-    loop:
-      - Naga
+    loop:  #list of string
+      - Naga  #string
       - Ajay
       - Bhartah
 
