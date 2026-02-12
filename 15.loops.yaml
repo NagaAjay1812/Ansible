@@ -1,0 +1,12 @@
+- name: demo on loops
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: loop the variables
+    ansbile.builtin.debug:
+      msg: "{{ items }}"
+    loop:
+    - Naga
+    - Ajay
+    - Bhartah
