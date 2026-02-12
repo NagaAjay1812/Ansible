@@ -5,7 +5,7 @@
   vars:
    NAME: Ansbile from play level
 
-  vars_file:
+  vars_files:
   - course.yaml
 
   vars_prompt:
@@ -17,8 +17,6 @@
   - name: print the name
     vars:
       NAME: "Ansible from task level"
-
-  - name: Ansible from args
     ansible.builtin.debug:
      msg: "Hi, my {{ NAME }}" 
 
