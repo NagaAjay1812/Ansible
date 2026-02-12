@@ -9,7 +9,7 @@
   - course.yaml
 
   vars_prompt:
-  - name: "print name"
+  - name: NAME
     NAME: "Ansible from prompt level"
     private: false 
  
