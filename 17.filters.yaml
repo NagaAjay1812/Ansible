@@ -4,12 +4,23 @@
   hosts: local
   connection: local
 
-  vars:                                         #topic is a string
-    topics: linux, shell, ansible, terraform
+  vars:                                           # resrved keyword       
+    topics: linux, shell, ansible, terraform     #topic is a string
 
-    tags:                         # reserved keyword
+    tags_map:                         # reserved keyword
       Name: Naga
       course: DevSecOps with AWS
+    tags_list: [
+    
+          {
+              "key": "Name",
+              "value": "Naga"
+          },
+          {
+              "key": "course",
+              "value": "DevSecOps with AWS"
+          }
+      ]
 
   tasks:
   - name: Greeting filter
@@ -20,6 +31,10 @@
     ansible.builtin.debug:
       msg: "{{ topics | ansible.builtin.split(',') }}"
 
-  - name: convert from map to list     #convert map (tags) to list
+  - name: convert from map to list     #convert map (tags_map) to list
     ansible.builtin.debug:
-      msg: "{{ tags | dict2items }}"
+      msg: "{{ tags_map | dict2items }}"
+
+  - name: convert from map to list     #convert list (tags_list) to map
+    ansible.builtin.debug:
+      msg: "{{ tags_list | items2dict }}"
