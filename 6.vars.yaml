@@ -1,4 +1,4 @@
-- name : kept play level variables  in seperate yaml
+- name : file level variables kept variables in seperate yaml
   host: local
   connection: local
   become: yes
