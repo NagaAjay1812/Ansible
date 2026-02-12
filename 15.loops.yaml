@@ -7,6 +7,6 @@
     ansbile.builtin.debug:
       msg: "{{ items }}"
     loop:
-    - Naga
-    - Ajay
-    - Bhartah
+      - Naga
+      - Ajay
+      - Bhartah
