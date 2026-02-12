@@ -5,4 +5,4 @@
   task:
   - name: print the facts from server 
     ansible.builtin.debug:
-      msg: "{{ansible_facts}}"    # printing facts from server
+      msg: "{{ ansible_facts }}"    # printing facts from server
