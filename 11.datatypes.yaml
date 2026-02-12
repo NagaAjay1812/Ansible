@@ -19,7 +19,7 @@
     ansible.builtin.debug:
       msg: |
       Course: " {{ Course }}"
-      Duration: "{{ Duration }}, details are :{{ details }} and topics : {{ Topics}}"
+      Duration: "{{ Duration }}, details are :{{ DETAILS }} and topics : {{ Topics }}"
      
 
 
