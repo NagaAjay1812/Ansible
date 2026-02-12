@@ -1,0 +1,11 @@
+# we generally use filters conv string to list
+
+- name: demo on filters
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: filters
+  ansible.builtin.debug:
+    msg: "Hi, Naga {{ Greeting | default('good morning')}}"
+  
