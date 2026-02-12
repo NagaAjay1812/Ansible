@@ -19,8 +19,8 @@
     ansible.builtin.debug:
       msg: |
       Course: " {{ Course }}"
-      Duration: "{{ Duration }}, months are :{{ Months }} and trainee : {{ Trainee }}"
-      Learned topics: "{{ Topics }}"
+      Duration: "{{ Duration }}, details are :{{ details }} and topics : {{ Topics}}"
+     
 
 
 
