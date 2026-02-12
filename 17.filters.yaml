@@ -7,9 +7,9 @@
   vars:                                         #topic is a string
     topics: linux, shell, ansible, terraform
 
-  tags:
-    Name: Naga
-    course: DevSecOps with AWS
+    tags:
+      Name: Naga
+      course: DevSecOps with AWS
 
   tasks:
   - name: Greeting filter
