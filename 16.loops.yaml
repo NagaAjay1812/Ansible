@@ -5,8 +5,8 @@
   tasks:
   - name: installing the packages
     ansible.builtin.package:
-      name: "{{ item }}"
-      
+      name: "{{ item.name }}" 
+      state: "{{item.state}}"
     loop:   
       # - mysql        if you want to install all pkgs you can do like this otherwise if you want to go with few installation & few removal go below approach
       # - nginx
