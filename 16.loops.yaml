@@ -11,8 +11,8 @@
       # - mysql        if you want to install all pkgs you can do like this otherwise if you want to go with few installation & few removal go below approach
       # - nginx
       # - zip
-      - { name: "nginx", stste: "absent" }
-      - { name: "mysql", stste: "present" }
-      - { name: "zip", stste: "present" }
+      - { name: "nginx", state: "absent" }
+      - { name: "mysql", state: "present" }
+      - { name: "zip", state: "present" }
 
     
