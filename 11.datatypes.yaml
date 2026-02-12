@@ -3,13 +3,13 @@
   connection: local
 
   vars:
-    Course: "DevSecOps with AWS" # string
-    Duration: 140 #number
+    COURSSE: "DevSecOps with AWS" # string
+    DURATION: 140 #number
     IS_LIVE: true #bool
     DETAILS:  #map/dictionary
-      Months: 4
-      Trainee: "NAGAAJAY"
-    Topics: #list -/[]
+      MONTHS: 4
+      TRAINEE: "NAGAAJAY"
+    TOPICS: #list -/[]
     - Linux
     - shell
     - Ansible
@@ -18,8 +18,8 @@
   - name: printing the variables
     ansible.builtin.debug:
       msg: |
-        Course: " {{ Course }}"
-        Duration: "{{ Duration }}, details are :{{ DETAILS }} and topics : {{ Topics }}"
+        Course: " {{ COURSE }}"
+        Duration: "{{ DURATION }}, details are :{{ DETAILS }} and topics : {{ TOPICS }}"
      
 
 
