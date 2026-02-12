@@ -18,9 +18,9 @@
   - name: printing the variables
     ansible.builtin.debug:
       msg: |
-      Course: " {{Course}}"
-      Duration: "{{Duration}}, months are :{{Months}} and trainee : {{Trainee}}"
-      Learned topics: "{{Topics}}"
+      Course: " {{ Course }}"
+      Duration: "{{ Duration }}, months are :{{ Months }} and trainee : {{ Trainee }}"
+      Learned topics: "{{ Topics }}"
 
 
 
