@@ -6,3 +6,9 @@
   - name: print the facts from server 
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}"    # printing facts from server
+
+  - name: checking its from redhat family or not
+    ansible.builtin.debug:
+      msg: "{{ Yes its from RedHat family }}"
+    when:  ansible_facts.os_family == "RedHat"
+    
