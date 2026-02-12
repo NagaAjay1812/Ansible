@@ -9,17 +9,17 @@
   - course.yaml
 
   vars_prompt:
-  - name: "ansible_prompt_level"
+  - name: "print name"
     NAME: "Ansible from prompt level"
     private: false 
  
   tasks:
-  - name: prefrence the vars
+  - name: print the name
     vars:
       NAME: "Ansible from task level"
 
-  - name: args level
+  - name: print the name
     ansible.builtin.debug:
-     msg: "Hi, my {{NAME}}" 
+     msg: "Hi, my {{ NAME }}" 
 
   
