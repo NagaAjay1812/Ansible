@@ -1,11 +1,11 @@
 - name: installing multiple packages
   hosts: local
   connection: local
-
+  become: yes   # to install the package you need sudo access dont forget to keep become: yes
   tasks:
   - name: installing the packages
     ansible.builtin.package:
-      name: "{{item}}"
+      name: "{{ item }}"
       state: present
     loop:
       - nginx
