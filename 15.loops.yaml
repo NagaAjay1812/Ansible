@@ -4,7 +4,7 @@
 
   tasks:
   - name: loop the variables
-    ansbile.builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ item }}"
     loop:
       - Naga
